@@ -31,7 +31,7 @@
             "live_status": [0, 1, 2], // 只在指定状态的直播间心跳，值为整数数组，0为未开播，1为正在直播，2为轮播
             "room_id": [],            // 直播间id，值为整数数组，除了上面的拥有粉丝牌的直播间还可以在其他直播间心跳
             "send_msg": "",           // 向所有有粉丝牌的房间发送消息(作用是点亮粉丝牌和增加其密度)，值为字符串，为空字符串则不发送
-            "timeout": 16,            // 心跳分钟数，值为数字(单位分钟,允许小数),心跳的时间，达到时间退出
+            "timeout": 16            // 心跳分钟数，值为数字(单位分钟,允许小数),心跳的时间，达到时间退出
         },
         "xlive_anchor_task": {   // 任务:参与直播天选时刻，下面为本功能详细配置
             "enable": true,          //任务开关，值为true或false分别代表开启和关闭
@@ -205,13 +205,13 @@
                     "text": "{title}",
                     "desp": "{msg_simple}" 
                 }
-            }/*,
+            },
             {
                 "enable": false,
                 "name": "server酱消息推送",
                 "msg_separ": "\n\n",
                 "method": 1,
-                "url": "https://sc.ftqq.com/{SCKEY}.send",
+                "url": "https://sc.ftqq.com/{SCU110117T78d3ed2c850217144e14e85927d8eade5f3e429c6e63d}.send",
                 "params": {
                     "text": "{title}",
                     "desp": "{msg_simple}" 
@@ -240,23 +240,23 @@
                 }
             },
             {
-                "enable": false,
+                "enable": true,
                 "name": "酷推个人QQ消息推送",
                 "method": 3,
-                "url": "https://push.xuthus.cc/send/{SKEY}",
+                "url": "https://push.xuthus.cc/send/{340c44884dad8bb5699e5e559e516e6b}",
                 "params": {
                     "c": "{msg_simple}"
                 }
-            }*/
+            }
         ]
     },
     "log_file": "BiliExp.log",   // 输出日志文件，不输出请留空，也可填写完整路径
     "log_console": false,         // 是否把日志输出到控制台
     "users": [{                 //账户数组，每个账户包含一个cookieDatas和tasks参数，使用actions的用户可以使用secrets(biliconfig)指定cookie而不用本参数
         "cookieDatas": {        // cookie获取方式见项目说明
-            "SESSDATA": "账号SESSDATA",
-            "bili_jct": "账号bili_jct",
-            "DedeUserID": "账号uid"
+            "SESSDATA": "5edd8b49%2C1634040994%2Ca5a06%2A41",
+            "bili_jct": "a1456f67264c01ec5a14f614bf68a217",
+            "DedeUserID": "423939988"
         },
         "show_name": "", /* 昵称，用于日志，消息推送，填空则默认使用账号昵称，在actions上不想显示真实昵称时使用
         /* 下面tasks参数与最上面default参数作用相同，但优先级更高，用于定制每个账号的参数，
